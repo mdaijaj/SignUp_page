@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>www.education.com</title>
+	<!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR90pdy9GYa6giEI5UZou5FMvGYszt25EKSHEdZhLvBzH_CewOB&usqp=CAU" alt="Paris" style="width:120px">	 -->
+	<style>
+		.navigation{
+			height: 150px;
+			width: 100%;
+			background-color: yellow;
+			margin-bottom: 20px;
+		}
+		ul{
+			list-style-type: none;
+			overflow: hidden;
+			border: 1px solid black;
+			background-color: green;
+		}
+		li{
+			float: left;
+		}
+		li a {
+		  display: block;
+		  color:lightblue;
+		  font-size: 20px;
+		  text-align: center;
+		  padding: 15px 15px;
+		  text-decoration: none;
+		}
+		li a:hover:not(.active) {
+  			background-color: black;
+		}
+		li a.active{
+			color: white;
+			background-color: purple;
+		}
+		.runDiv{
+			height: 200px;
+			width: 50%;
+			background-color: skyblue;
+		}
+		img{
+			border: 1px solid #ddd;
+			border-radius: 100px;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body bgcolor="#798020">
+	<h2>Blog Medium</h2>
+	<ul>
+		<li><a class="active" href="/login_home">Home</a></li>
+		<li><a href="/#">technology</a></li>
+		<li><a href="/#">business</a></li>
+		<li><a href="/#">art & craft</a></li>
+		<li><a href="/#">turist</a></li>
+		<li><a href="/#">stock market</a></li>
+		<li><a href="/#">finance</a></li>
+		<li><a href="/#">books</a></li>
+		<li><a href="/#">culture</a></li>
+		<li><a href="/#">music</a></li>
+		<li><a href="/#">game</a></li>
+		<li><a href="/#">news</a></li>
+	</ul>
+
+	<dir class="blogs"> <h2><center> All users</center></h2>
+		<% for (let i of data) { %>
+		<center><div class="runDiv">
+			<h3> <%= "once you learn to read you will be forever free"%> </h3>
+
+			<a href="/blog_details?id=<%= i.id%>"> <h2><%= i.title %> </h2></a>
+			<a href="/blog_details?id=<%= i.id%>"> <p><%= i.description %> </p></a>
+			<p> <%= i.email %> </p>
+		</center></div>
+		<% } %>
+	</dir>
+</body>
+</html>

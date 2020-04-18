@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		ul{
+			list-style-type: none;
+			overflow: hidden;
+			border: 1px solid black;
+			background-color: purple;
+		}
+		li{
+			float: right;
+		}
+		li a {
+		  display: block;
+		  color: black;
+		  font-size: 22px;
+		  text-align: center;
+		  padding: 18px 20px;
+		  text-decoration: none;
+		}
+		li a:hover:not(.active) {
+  			background-color: blue;
+		}
+		li a.active{
+			color: white;
+			background-color: chocolate;
+		}
+		input[type=text] {
+			width: 15%;
+			padding: 10px 10px;
+			margin: 8px;
+			border: 1px solid black;
+			outline: none;
+			}
+		.main_div{
+			text-align: center;
+		}
+		textarea {
+			width: 40%;
+			height: 250px;
+			padding: 12px 20px;
+			border: 2px solid #ccc;
+			border-radius: 10px;
+			background-color: brown;
+			font-size: 16px;
+		}
+		.col-25 {
+			float: left;
+			width: 5%;
+			margin-top: 6px;
+		}
+	</style>
+	<title>www.techeducation.com</title>
+</head>
+<body bgcolor="gray">
+	<h1><center>Blogs</center></h1>
+	<ul>
+	  <li><a class="active" href="/update_blog">Edit Blog</a></li>
+	  <li><a href="/post_blog">Post Blog</a></li>
+	  <li><a href="/delete_blog">Delete Blog</a></li>
+	  <li><a href="all_get">Get Blog</a></li>
+	  <li><a href="login_home">Home</a></li>
+	  
+	</ul>
+	<h1><center>Edit Blogs</center></h1>
+	<div class="main_div">
+        <form action="/update_blog" method='POST'>
+          <label for="id">Blog id  : </label>
+          <input type="text"  param name="id" placeholder="Enter blog id.."><br><br>
+          
+		  <label for="lname">Blog Title  : </label>
+		  <input type="text"  name="title" placeholder="Title..."><br><br>
+
+		  <label for="lname">Description:</label>
+		  <input type="text"  name="description" placeholder="Enter Description..."><br><br>
+
+      	  <label for="subject">Blog text : </label><br><br>
+		  <textarea name="blog_text" placeholder="Some text..."></textarea><br><br>
+
+		  <input type="Submit" value="Submit">
+		  <input type="button" value="Reset">
+		</form>
+	</div>
+</body>
+</html>

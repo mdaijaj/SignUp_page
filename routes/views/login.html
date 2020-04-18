@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login design form</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			background: url(https://cdn.glitch.com/74174196-fbf8-4f3d-b51c-6334318ac153%2Fback.jpg?v=1561368450181);
+			background-size: cover;
+			background-position: center;
+			font-family: sans-serif;
+			background-attachment: fixed;
+		}
+		.Loginbox img{
+			width: 175px;
+			margin-top: -15%;
+			margin-left: 33%;
+		}	
+		.Loginbox{
+			width: 480px;
+			height: 500px;
+			border-radius: 50px;
+			margin-left: 35%;
+			background: #000;
+			color:#fff;
+			top: 20%;
+			position: absolute;
+			box-sizing: border-box;
+		}
+		.Loginbox input[type="submit"]:hover
+		{
+			cursor: pointer;
+			background-color: red;
+			color: green;
+		}
+		.h3{
+			color: red;
+		}
+	</style>
+<body>
+	<div class="Loginbox"> 
+		<img src="https://cdn.glitch.com/74174196-fbf8-4f3d-b51c-6334318ac153%2Favatar.png?v=1561368988007">
+		<div>
+			<center><h1>Login Here</h1></center>
+			<center>
+				<form action="/user_login" method="POST" >
+					<p>Username</p><input type="text" name="email" placeholder="Enter Username" required="">
+					<p>Password</p><input type="password" name="password" placeholder="Enter Password"required=""><br><br>
+					<input type="submit" value="login">
+				</form>
+
+				<form action="?"><br>
+					<input type="submit" value="home">
+				</form>
+				
+				<form action="/user_signup">
+					<h3 class="h3">If you not register then firstly register yourselef...</h3>
+					<input type="submit" value="Register">
+				</form>
+			</center>
+		</div>
+	</div>
+</body>
+</head>
+</html>

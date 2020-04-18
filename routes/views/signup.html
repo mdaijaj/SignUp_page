@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Sing Up</title>
+	<style>
+		body{
+			background:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtrUwsRxa8PyVUTEy5yzNy3DtsuB8T3OdDbzfZPl39POP01ra2);
+			background-position: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.bg{
+			height: 570px;
+			width: 550px;
+			background:url(https://freestyleconnection.com/wp-content/uploads/2017/11/background-gradient-02-1024x768.jpg);
+			margin: 10% 30% 0% 30%;
+			padding: 2px;
+		}
+		.bg h1{
+			text-align: center;	
+			color: yellow;
+		}
+		input{
+			border-color: blue;
+			font-size: 18px;
+		}
+		.h2{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div class="bg">
+		<h1>Sign up Your Account</h1>
+		<center>
+			<div>
+				<form action="/sign_up" method="POST">
+					<input type="text" name="name" placeholder="Name" required=""><br><br>
+					<input type="text" name="surname" placeholder="Surname" required=""><br><br>
+					<input type="email" name="email" placeholder="Email" required=""><br><br>
+					<input type="password" name="password" placeholder="Create Password" required=""><br><br>
+					<input type="password" name="confirm_password" placeholder="Conform Password" required=""><br><br>
+					<input type="submit" name="" value="Submit">
+					<input type="reset" name="" value="Reset">
+				</form><br>
+
+				<form action="/user_login">
+					<h2 class="h2">If you sign up then click on login button...</h2>
+					<input type="submit" value="Login">
+				</form>
+			</div>
+		</center>
+	</div>
+</body>
+</html>
